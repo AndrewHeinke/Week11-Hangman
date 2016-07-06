@@ -8,8 +8,7 @@ inquirer.prompt([
     type: 'text',
     message: 'Guess a Letter: ',
     validate: function(str) {
-      var regEx = new RegExp("[a-zA-Z]");
-      return regEx.test(str);
+      return /[a-z]/i.test(str);
     }
   }
 ]).then(function(answers) {
