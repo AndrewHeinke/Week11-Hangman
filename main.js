@@ -1,4 +1,3 @@
-// game is played and contains all of the user-input
 var prompt = require('prompt');
 var Word = require('./word.js');
 var Game = require('./game.js');
@@ -46,7 +45,7 @@ game = {
 				    	console.log('Already guessed that letter');
 				    }
 		    		if (self.currentWrd.didWeFindTheWord()) {
-				    	console.log('You Won!!!');
+				    	console.log('You Won! The Pokemon was ' + self.currentWrd.word);
 				    	return;
 				    }
 			    }
