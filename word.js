@@ -1,6 +1,6 @@
 var letter = require('./letter.js');
 var Word = function(wrd) {
-	this.word = word;
+	this.word = wrd;
 	this.lets = [];
 	this.found = false;
 	this.getLets = function(word) {

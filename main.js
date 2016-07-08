@@ -25,6 +25,7 @@ game = {
 	keepPromptingUser : function(){
 		var self = this;
 		prompt.get(['guessLetter'], function(err, result) {
+				console.log("");
 		    console.log('The letter you guessed is: ' + result.guessLetter);
 
 		    var findHowManyOfUserGuess = self.currentWrd.checkIfLetterFound(result.guessLetter);
@@ -52,13 +53,15 @@ game = {
 
 		    console.log('Guesses remaining: ', self.guessesRemaining);
 		    console.log(self.currentWrd.wordRender());
-		    console.log('here are the letters you guessed already: ' + self.guessedLetters);
+				console.log("");
+		    console.log('Letters already guessed: ' + self.guessedLetters);
+
 
 		    if ((self.guessesRemaining > 0) && (self.currentWrd.found === false)){
 		    	self.keepPromptingUser();
 		    } else if(self.guessesRemaining === 0){
-			    	console.log('Game over bro it was ', self.currentWrd.word);
-			    	console.log('Get with the program man');
+			    	console.log('You lost! The Pokemon was', self.currentWrd.word);
+			    	console.log('Gotta catch um all!');
 			  } else{
 			    	console.log(self.currentWrd.wordRender());
 			  }
