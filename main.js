@@ -46,6 +46,7 @@ game = {
 				    }
 		    		if (self.currentWrd.didWeFindTheWord()) {
 				    	console.log('You Won! The Pokemon was ' + self.currentWrd.word);
+							console.log('WAY TO GOOOOO!!!!!');
 				    	return;
 				    }
 			    }
